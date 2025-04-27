@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 10px;
+    color: #333;
+}
+
+h1 {
+    font-size: 38px;
+    letter-spacing: -1px;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 20px;
+}
+
+.icon {
+    font-size: 1em;
+}
+
+.container {
+    background-color: white;
+    margin: auto;
+    min-height: 95vh;
+    max-width: 600px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    background-image: linear-gradient(to right top, #a267ac, #8c6bad, #7670ae, #5f75af, #487ab0);
+    color: white;
+    display: flex; /* Use flexbox for easier layout */
+    flex-direction: column; /* Stack children vertically */
+}
+
+form {
+    width: 80%;
+    margin: 0 auto 36px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+input[type="text"] {
+    padding: 10px;
+    flex-grow: 1;
+    border: none;
+    outline: none; /* Remove default focus outline */
+}
+
+button[type="submit"] { /* More specific selector */
+    background-color: #ff8a65; /* A warm, inviting color */
+    color: white;
+    padding: 10px 15px;
+    margin-left: auto;
+    border: none;
+    cursor: pointer;
+    line-height: 0;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff7043; /* Slightly darker shade for hover state */
+}
+
+
+@media (max-width: 400px) {
+    button[type="submit"] {
+        flex-grow: 1;
+        margin-left: 0; /* Adjust margin for smaller screens */
+    }
+}
+
+.icn-add {
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px; /* Add space below the list */
+    flex-grow: 1; /* Allow list to take available space */
+}
+
+li {
+    background-color: #fff;
+    color: #333;
+    margin-top: 8px;
+    padding: 12px 15px; /* Slightly more padding */
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s, background-color 0.2s, border 0.2s;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out name and vote count */
+    align-items: center; /* Vertically align items */
+    border: 2px solid transparent; /* Add border for voted state */
+}
+
+li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Enhance hover shadow */
+}
+
+/* Style for the voted item */
+li.voted {
+    border-color: #ff7043; /* Use the accent color for the border */
+    background-color: #fff3e0; /* Light background tint for voted item */
+}
+
+.vote-count {
+    font-weight: bold;
+    background-color: #eee; /* Background for vote count */
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 0.9em;
+    min-width: 25px; /* Ensure minimum width */
+    text-align: center;
+}
+
+#leadingPlace {
+    font-size: 18px;
+    margin-top: 20px; /* Reset margin, handled by ul */
+    margin-bottom: 15px; /* Add space below leading place */
+    font-weight: bold;
+    min-height: 27px; /* Reserve space even when empty */
+}
+
+#deletePollButton { /* Renamed ID selector */
+    background-color: #f44336; /* Red color for delete */
+    color: white;
+    padding: 12px 20px; /* Adjusted padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-top: auto; /* Push to the bottom */
+    width: 50%; /* Make it reasonably wide */
+    align-self: center; /* Center the button */
+    font-size: 1em;
+}
+
+#deletePollButton:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+    transform: translateY(-2px);
+}
