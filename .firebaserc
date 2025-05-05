@@ -1,0 +1,10 @@
+{
+  "projects": {
+    "default": "lunchvote-dev",
+    "dev": "lunchvote-dev",
+    "stg": "lunchvote-stg",
+    "prod": "lunchvote-prod"
+  },
+  "targets": {},
+  "etags": {}
+}
