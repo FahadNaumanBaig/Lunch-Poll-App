@@ -1,0 +1,21 @@
+{
+  "name": "13_lunch-break-poll-app",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "lint": "eslint \"src/**/*.{js,jsx}\" --max-warnings=0 --no-error-on-unmatched-pattern",
+    "format": "prettier --write \"src/**/*.{js,jsx,json,css,md}\" --no-error-on-unmatched-pattern"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.26.0",
+    "eslint": "^9.26.0",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.0.0",
+    "prettier": "^3.5.3"
+  }
+}
