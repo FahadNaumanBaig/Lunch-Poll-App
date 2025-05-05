@@ -1,0 +1,29 @@
+name: Deploy
+on:
+  push:
+    branches: [main]      # auto‑deploy to stg
+  workflow_dispatch:      # clickable “Run workflow” to prod
+    inputs:
+      environment:
+        description: "Target environment"
+        required: true
+        default: production
+        type: choice
+        options: [production]
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ github.ref_name == 'main' && 'staging' || github.event.inputs.environment }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build          # add later when we have React build
+      - run: |
+          alias=$( [ "${{ github.ref_name }}" = "main" ] && echo "stg" || echo "prod" )
+          firebase use $alias
+          firebase deploy --only hosting --token $FIREBASE_TOKEN
