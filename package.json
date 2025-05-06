@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "script.js",
   "scripts": {
-    "lint": "eslint \"src/**/*.{js,jsx}\" --max-warnings=0 --no-error-on-unmatched-pattern",
-    "format": "prettier --write \"src/**/*.{js,jsx,json,css,md}\" --no-error-on-unmatched-pattern"
-  },
+  "lint": "eslint \"src/**/*.{js,jsx}\" --max-warnings=0 --no-error-on-unmatched-pattern",
+  "format": "prettier --write \"src/**/*.{js,jsx,json,css,md}\" --no-error-on-unmatched-pattern",
+  "dev": "vite"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -16,6 +17,11 @@
     "eslint-config-prettier": "^10.1.2",
     "eslint-plugin-react": "^7.37.5",
     "globals": "^16.0.0",
-    "prettier": "^3.5.3"
+    "prettier": "^3.5.3",
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "firebase": "^10.14.0",
+    "firebaseui": "^6.1.0"
   }
 }
