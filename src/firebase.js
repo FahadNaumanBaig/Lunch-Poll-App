@@ -5,7 +5,7 @@ import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check';
 
 // --- 5.1  paste your project’s dev config here -------------
 const firebaseConfig = {
-  apiKey: "AIza....",
+  apiKey: "AIzaSyBwCsdvs_hz6HAled6-6vCKW47qQQHL3zs",
   authDomain: "lunchvote-dev.firebaseapp.com",
   databaseURL: "https://lunchvote-dev-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "lunchvote-dev",
