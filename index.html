@@ -1,30 +1,44 @@
 <!doctype html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Lunch Break Poll</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="container">
-            <h1>
-                <span class="icon material-symbols-outlined">lunch_dining</span>
-                LunchVote
-            </h1>
-            <form id="placeForm">
-                <input type="text" id="placeInput" placeholder="Add a lunch place">
-                <button type="submit">
-                  <span class="icn-add material-symbols-outlined">add</span>
-                </button>
-            </form>
-            <div id="leadingPlace"></div>
-            <ul id="placesList"></ul>
-            <button id="deletePollButton" style="display: none;">Delete Poll</button>
-        </div>
-        <script src="script.js" type="module"></script>
-    </body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunch Break Poll</title>
+
+    <!-- Fonts & icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <!-- Auth buttons -->
+    <button id="loginBtn">Sign In / Register</button>
+    <button id="logoutBtn" hidden>Sign Out</button>
+
+    <!-- App container -->
+    <div class="container">
+      <h1>
+        <span class="icon material-symbols-outlined">lunch_dining</span>
+        LunchVote
+      </h1>
+
+      <form id="placeForm">
+        <input type="text" id="placeInput" placeholder="Add a lunch place">
+        <button type="submit">
+          <span class="icn-add material-symbols-outlined">add</span>
+        </button>
+      </form>
+
+      <div id="leadingPlace"></div>
+      <ul id="placesList"></ul>
+      <button id="deletePollButton" style="display:none;">Delete Poll</button>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="./src/auth-ui.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
 </html>
